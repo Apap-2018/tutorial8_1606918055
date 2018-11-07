@@ -1,7 +1,8 @@
+# Tutorial 8
 Wisnu Pramadhitya Ramadhan
 1606918055
 
-# WRITE UP
+## WRITE UP
 1. Apa fungsi BCryptPasswordEncoder?
 > Password pengguna tidak boleh disimpan dalam bentuk plain text untuk menjaga kerahasiaan maka kita hash password pengguna.
 Kegunaan dari BCryptPasswordEncoder adalah sebagai encoder untuk melakukan hashing dengan fungsi hash BCrypt.

@@ -13,5 +13,4 @@ Set<GrantedAuthority> grantedAuthoritySet = new HashSet<>();
 grantedAuthoritySet.add(new SimpleGrantedAuthority(user.getRole()));
 ```
 > Kita membuat set yang berisi otoritas yang user miliki. Dalam hal ini kita membagi otoritas berdasarkan rolenya.
-Class SimpleGrantedAuthority menyimpan string representasi dari otoritas yang dimiliki user yang terautentikasi dan akan
-dicek oleh middleware ketika terdapat request dari user tersebut.
+Class SimpleGrantedAuthority menyimpan string representasi dari otoritas yang dimiliki user yang terautentikasi. Set terseut selanjutnya diberikan ke class User dan akan dicek oleh middleware ketika terdapat request dari user tersebut.

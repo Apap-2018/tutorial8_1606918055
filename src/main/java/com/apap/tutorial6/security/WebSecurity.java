@@ -17,12 +17,10 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        super.configure(http);
         http.authorizeRequests()
                 .antMatchers("/css/**", "/js/**").permitAll()
-                .antMatchers("/flight/**").hasAnyAuthority("PILOT")
-                .antMatchers("/pilot/**").hasAnyAuthority("ADMIN")
-                .antMatchers("/").authenticated()
+                .antMatchers("/flight/**").hasAnyAuthority("PILOT", "ADMIN")
+                .antMatchers("/pilot/**").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/login").permitAll()
